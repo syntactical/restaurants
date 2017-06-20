@@ -1,0 +1,4 @@
+graft restaurants/templates
+graft restaurants/static
+include restaurants/schema.sql
+

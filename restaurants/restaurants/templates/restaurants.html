@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Where to eat?</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Good Food</h1>
+  {% block body %}
+    <ul class=restaurants>
+    {% for entry in entries %}
+      <li><h2>{{ entry.name }}</h2>{{ entry.cuisine_type }} - - - {{entry.address}}
+    {% else %}
+      <li><em>Unbelievable! no restaursnts in new york</em>
+    {% endfor %}
+    </ul>
+  {% endblock %}
+</div>

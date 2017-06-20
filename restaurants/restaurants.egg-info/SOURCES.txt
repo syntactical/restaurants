@@ -1,0 +1,9 @@
+MANIFEST.in
+restaurants/__init__.py
+restaurants/restaurants.py
+restaurants/schema.sql
+restaurants.egg-info/PKG-INFO
+restaurants.egg-info/SOURCES.txt
+restaurants.egg-info/dependency_links.txt
+restaurants.egg-info/requires.txt
+restaurants.egg-info/top_level.txt
