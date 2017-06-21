@@ -1,1 +1,0 @@
-from .restaurants import app
