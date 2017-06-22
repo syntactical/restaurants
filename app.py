@@ -1,5 +1,6 @@
 import os
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
 from flask import Flask, render_template
 from models.restaurant import Restaurant, db
 
@@ -12,7 +13,8 @@ with app.app_context():
         db.create_all()
 
 from data.etl import load_restaurant_data
-load_restaurant_data('./data/inspections.csv')
+conn = create_engine(app.config['SQLALCHEMY_DATABASE_URI']).connect()
+load_restaurant_data(conn, './data/inspections.csv')
 
 @app.route('/')
 def hello():

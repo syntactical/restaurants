@@ -2,7 +2,7 @@ import petl as etl
 import psycopg2
 from datetime import datetime
 
-def load_restaurant_data(from_file):
+def load_restaurant_data(conn, from_file):
     restaurants = (
         etl
         .fromcsv(from_file)
@@ -20,6 +20,4 @@ def load_restaurant_data(from_file):
     )
 
     etl.tocsv(restaurants, 'cleaned_inspections.csv')
-
-    conn = psycopg2.connect('user=postgres password=postgres dbname=restaurants')
     etl.todb(restaurants, conn, 'restaurants', drop=True, create=True)
