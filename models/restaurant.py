@@ -1,6 +1,8 @@
-from app import db
+from flask_sqlalchemy import SQLAlchemy
 
-class Result(db.Model):
+db = SQLAlchemy()
+
+class Restaurant(db.Model):
     __tablename__ = 'restaurants'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -22,6 +24,4 @@ class Result(db.Model):
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
-
-
         
