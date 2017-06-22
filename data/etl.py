@@ -21,5 +21,5 @@ def load_restaurant_data(from_file):
 
     etl.tocsv(restaurants, 'cleaned_inspections.csv')
 
-    conn = psycopg2.connect('user=postgres password=postgres')
+    conn = psycopg2.connect('user=postgres password=postgres dbname=restaurants')
     etl.todb(restaurants, conn, 'restaurants')
