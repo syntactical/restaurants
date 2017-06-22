@@ -14,4 +14,7 @@ def hello():
     return "Hello World!"
 
 if __name__ == '__main__':
+    from data.etl import load_restaurant_data
+    load_restaurant_data('./data/inspections.csv')
     app.run()
+
