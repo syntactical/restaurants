@@ -7,11 +7,5 @@ $(document).ready(function(){
         id: 'mapbox.streets',
         accessToken: 'your.mapbox.access.token'
     }).addTo(mymap);
-
-    function onMapClick(e) {
-        alert("You clicked the map at " + e.latlng);
-    }
-
-    mymap.on('click', onMapClick);
 });
 

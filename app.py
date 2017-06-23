@@ -21,13 +21,5 @@ def hello():
     restaurants = Restaurant.query.limit(5).all()
     return render_template('restaurants.html', restaurants=restaurants)
 
-@app.route('/restaurants_near')
-def restaurants_near():
-    # test for bad params
-    latitude = request.args.get('latitude')
-    longitude = request.args.get('longitude')
-
-    
-
 if __name__ == '__main__':
     app.run()
