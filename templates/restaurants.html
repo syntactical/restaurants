@@ -7,7 +7,7 @@
   {% block body %}
     <ul class=restaurants>
     {% for restaurant in restaurants %}
-      <li><h3>{{ restaurant.name }}</h3>{{ restaurant.address }}, {{ restaurant.city }} {{ restaurant.zip_code }} • <a href="tel:{{restaurant.phone}}">{{ restaurant.phone }}</a> • <a href="http://maps.google.com/?q={{ restaurant.address }}, {{ restaurant.city }} {{ restaurant.zip_code }}" rel="noopener noreferrer" target="_blank">Map</a>
+      <li><h3>{{ restaurant.name }}</h3>{{ restaurant.address }}, {{ restaurant.city }} {{ restaurant.zip_code }} • Grade: <b>{{ restaurant.grade }}</b> • <a href="tel:{{restaurant.phone}}">{{ restaurant.phone }}</a> • <a href="http://maps.google.com/?q={{ restaurant.address }}, {{ restaurant.city }} {{ restaurant.zip_code }}" rel="noopener noreferrer" target="_blank">Map</a>
     {% endfor %}
     </ul>
 
