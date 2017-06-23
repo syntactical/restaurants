@@ -18,7 +18,7 @@ load_restaurant_data(conn, './data/inspections.csv')
 
 @app.route('/')
 def hello():
-    restaurants = Restaurant.query.limit(5).all()
+    restaurants = Restaurant.query.limit(10).all()
     return render_template('restaurants.html', restaurants=restaurants)
 
 if __name__ == '__main__':
